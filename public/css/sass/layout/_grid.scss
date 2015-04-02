@@ -1,0 +1,14 @@
+@import "susy";
+$susy : (
+	columns: 12,
+	gutters: 0.25,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+		debug: (
+			image: $showSusy,
+			color: rgba(#53B5BE, 0.5),
+			output: background,
+			toggle: top right,
+		),
+);

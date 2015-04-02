@@ -1,0 +1,21 @@
+<% layout('../layout') -%>
+
+<div class="gallery--wrapper">
+	<section class="gallery--header">
+		<span class="gallery--header-title">
+			Image Gallery
+		</span>
+		<span class="gallery--header-description">
+			My lovely sweety kitty
+		</span>
+	</section>
+	<section class="gallery--content">
+	<%photos.forEach(function(photo){%>
+		<div class="gallery--content-photo">
+			<span class="gallery--content-photo-sign"><%= photo.name%></span>
+			<a href="/photo/<%= photo.id %>/open"><img class="gallery--content-photo-img"src="<%=photo.thumb_path%>" alt="<%=photo.name%>"></a>
+			<a href="/photo/<%=photo.id %>/download" class="gallery--content-photo-download">>>download<<</span></a>
+		</div>
+	<%})%>
+	</section>
+</div>

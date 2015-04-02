@@ -1,0 +1,29 @@
+<% layout('../layout') %>
+
+
+<section class="upload--wrapper">
+	<section class="upload--header">
+		<span class="upload--header-title">
+			Upload sweety kitty
+		</span>
+	</section>
+	<section class="upload--form__wrapper">
+		<form  method="POST" enctype="multipart/form-data" class="upload--form">
+			<fieldset class="upload--form-name">
+				<span class="upload--form-name-label">
+					Name of Kitty
+				</span>
+				<input class="upload--form-name-input" type="text" name="name" require placeholder='type name here...'>
+			</fieldset>
+			<fieldset class="upload--form-file">
+				<span class="upload--form-file-label">
+					file
+				</span>
+				<input type="file" name="photo" class="upload--form-file-input" accept='image/*'>
+			</fieldset>
+			<fieldset class="upload--form-submit">
+				<input type="submit" class="upload--form-submit-button" value="send">
+			</fieldset>
+		</form>
+	</section>
+</section>

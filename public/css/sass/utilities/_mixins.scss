@@ -1,0 +1,10 @@
+// my own mixins for sass
+@import "compass/css3";
+
+@mixin my-clearfix{
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

@@ -1,0 +1,89 @@
+.gallery--wrapper{
+	background: #34495e;
+	@include container();
+	// @include my-clearfix;
+
+	.gallery--header{
+		width: span(12);
+		margin: 0 auto;
+		background: #ccc;
+		display: block;
+		@include border-radius(14px);
+			@media (min-width: 1024px){
+				width: span(10);
+			}
+
+		.gallery--header-title{
+			display: block;
+			background: blue;
+			color: white;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 1.5em;
+			letter-spacing: 0.5em;
+			padding: 1em;
+		}
+
+		.gallery--header-description{
+			background: darken(white,25);
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.3em;
+			font-size: 1.1em;
+
+		}
+	}
+
+	.gallery--content{
+		// @include span(11);
+		width: span(12);
+		margin: 0 auto;
+		margin-top: 3em;
+		text-align: center;
+		background: rgba(#336E7B,0.5);
+		padding: 1em;
+		@include border-radius(25px);
+			@media (min-width: 1024px){
+				width: span(10);
+			}
+			
+
+		.gallery--content-photo{
+			display: inline-block;
+			margin: 15px;
+			background: #fff;
+				
+				.gallery--content-photo-img{
+					width: 250px;
+					height: 250px;
+					border-bottom: 1px dotted #000;
+
+				}
+				.gallery--content-photo-download{
+					background: #fff;
+					display: block;
+					color: darken(#fff,75%);
+					font-weight: 700;
+					cursor: pointer;
+					padding: 7px;
+					@include box-sizing(content-box !important);
+					text-decoration: none;
+					text-transform: uppercase;
+						&:hover{
+							color: #fff;
+							background: darken(#fff,75%);
+						}
+
+				}
+
+				.gallery--content-photo-sign{
+					background: darken(#fff,75%);
+					display: block;
+					color: #fff;
+					font-weight: 700;
+				}
+
+		}
+	}
+}

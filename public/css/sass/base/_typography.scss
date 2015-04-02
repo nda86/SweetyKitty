@@ -1,0 +1,47 @@
+//Style of base typography
+
+
+
+//Vertical rhythm
+
+// @import "compass/typography";
+
+// body{
+// 	@include debug-vertical-alignment(); 
+// }
+
+// //ratio: 1.3
+// $base-font-size: 16px;
+// $base-line-height: 24px;
+// $rhythm-unit: em;
+// $rem-with-px-fallback: true;
+
+// @include establish-baseline();
+
+
+
+// //Type-scale: 1.333 - Perfect Fourth
+
+// h1{
+// 	@include adjust-font-size-to(3.157em);
+// }
+
+// h2{
+// 	@include adjust-font-size-to(2.369em);
+// }
+
+// h3{
+// 	@include adjust-font-size-to(1.777em);
+// }
+
+// h4{
+// 	@include adjust-font-size-to(1.333em);
+// }
+
+// h5{
+// 	@include adjust-font-size-to(1em);
+// }
+
+// h6{
+// 	@include adjust-font-size-to(0.75em); 
+// }
