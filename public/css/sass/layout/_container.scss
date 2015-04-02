@@ -5,3 +5,27 @@
 	     -o-box-sizing: border-box;
 	        box-sizing: border-box;
 }
+
+html,body{
+	height: 100%;
+}
+
+.page-wrapper{
+	min-height: 100%;
+	margin-bottom: -126px;
+}
+
+.page-wrapper:after{
+	display: block;
+	content: '';
+	height: 126px;
+}
+
+// #content{
+// 	min-height: 100% !important;
+// }
+
+
+// body{
+// 	@include container(80em);
+// }

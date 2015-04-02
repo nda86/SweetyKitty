@@ -8,3 +8,30 @@
 		clear: both;
 	}
 }
+
+// @mixin stickyFooter($content,$footer,$footerHeight){
+// 	*{
+// 		margin: 0;
+// 	}
+
+// 	html, body{
+// 		height: 100%;
+// 	}
+
+// 	$content{
+// 		min-height: 100%;
+// 		margin-bottom: -$footerHeader;
+// 	}
+
+// 	$content:after{
+// 		display: block;
+// 		content: '';
+// 	}
+
+// 	$footer,$content:after{
+// 		height: $footerHeight;
+// 	}
+
+
+
+// }

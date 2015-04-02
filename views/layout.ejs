@@ -7,13 +7,15 @@
 
 <body>
 
-<header id='header'>
-	<% include ./partials/header %>
-</header>
+<div class="page-wrapper">
+	<header id='header'>
+		<% include ./partials/header %>
+	</header>
 
-<section id="content">
-	<%- body %>
-</section>
+	<section id="content">
+		<%- body %>
+	</section>
+</div>		
 
 <footer id="colophon">
 	<% include ./partials/footer %>
