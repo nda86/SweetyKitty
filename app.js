@@ -23,8 +23,16 @@ var thumb = require('./utils/thumbnails');
 // plugin routes
 var routes = require('./routes');
 
+
+
+
+
 // router for photo
-var photos = require('./routes/photos');
+var photosRoute = require('./routes/photos');
+var usersRoute = require('./routes/users');
+
+
+
 
 // utilite for work with path,folder e.t.c
 var path = require('path');
@@ -69,8 +77,9 @@ app.use(methodOverride());
 
 
 app.get('/',routes.index);
-app.get('/show', photos.list);
-app.get('/upload',photos.form);
+app.get('/show', photosRoute.list);
+app.get('/upload',photosRoute.form);
+app.get('/signup',usersRoute.signupForm);
 
 var options = {
 	dest: './public/photos/',
@@ -91,12 +100,12 @@ var options = {
 	}
 }
 app.post('/upload', multer(options), 
-	photos.submit(app.get('photos')));
+	photosRoute.submit(app.get('photos')));
 
-app.get('/photo/:id/open',photos.open(root));
-app.get('/photo/:id/download',photos.download(root));
-app.post('/photo/:id/updateSign',photos.updateSign);
-app.get('/photo/:id/delete',photos.delete);
+app.get('/photo/:id/open',photosRoute.open(root));
+app.get('/photo/:id/download',photosRoute.download(root));
+app.post('/photo/:id/updateSign',photosRoute.updateSign);
+app.get('/photo/:id/delete',photosRoute.delete);
 
 // error hanler
 app.use(errorhandler());

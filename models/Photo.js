@@ -1,10 +1,11 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/kittyDB');
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/kittyDB');
+var db = require('../ext/db');
 
-var schema = new mongoose.Schema({
+var schemaPhoto = new db.Schema({
 	name: String,
 	path: String,
 	thumb_path: String
 });
 
-module.exports = mongoose.model('Photo', schema);
+module.exports = db.model('Photo', schemaPhoto);
