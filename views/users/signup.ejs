@@ -1,0 +1,22 @@
+<% layout('../layout') -%>
+<section class="signUp">
+	<div class="wrapper">
+		<form action="/signup" method="POST" class="signup--form">
+			<fieldset class="signup--form-name">
+				<label class="signup--form-name-label">
+					name
+				</label>
+				<input type="text" class="signup--form-name-input" name="name">
+			</fieldset>
+			<fieldset class="signup--form-password">
+				<label class="signup--form-password-label">
+					password
+				</label>
+				<input type="password" class="signup--form-password-input" name="password">
+			</fieldset>
+			<fieldset class="signup--form-submit">
+				<input type="submit" class="signup--form-submit-button" value="sign up">
+			</fieldset>
+		</form>
+	</div>
+</section>
