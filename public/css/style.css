@@ -519,6 +519,24 @@ html, body {
   font-weight: 400;
   font-size: 1.6em;
 }
+.gallery--wrapper .gallery--content .gallery--content-photo .gallery--content-photo-sign .link-delete {
+  display: block;
+  float: left;
+  margin-left: 7px;
+  color: red;
+}
+.gallery--wrapper .gallery--content .gallery--content-photo .gallery--content-photo-sign .link-delete:hover {
+  color: maroon;
+}
+.gallery--wrapper .gallery--content .gallery--content-photo .gallery--content-photo-sign .link-updateSign {
+  display: block;
+  float: right;
+  margin-right: 7px;
+  color: green;
+}
+.gallery--wrapper .gallery--content .gallery--content-photo .gallery--content-photo-sign .link-updateSign:hover {
+  color: #003400;
+}
 
 .upload--wrapper {
   max-width: 100%;

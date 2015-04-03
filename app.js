@@ -95,6 +95,8 @@ app.post('/upload', multer(options),
 
 app.get('/photo/:id/open',photos.open(root));
 app.get('/photo/:id/download',photos.download(root));
+app.post('/photo/:id/updateSign',photos.updateSign);
+app.get('/photo/:id/delete',photos.delete);
 
 // error hanler
 app.use(errorhandler());

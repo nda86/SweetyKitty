@@ -93,3 +93,22 @@ exports.download = function(dir){
 		})
 	}
 }
+
+
+exports.updateSign = function(req,res,next){
+	var id = req.params.id;
+	var newName = req.body.newName;
+	Photo.findByIdAndUpdate(id,{$set: {name: newName}},{upset: true},
+		function(err){
+			if(err) next(err);
+			res.redirect('/show#' + id);
+		});
+};
+
+exports.delete = function(req,res,nex){
+	var id = req.params.id;
+	Photo.findByIdAndRemove(id,function(err){
+		if(err) next(err);
+		res.redirect('/show');
+	});
+}

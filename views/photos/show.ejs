@@ -11,11 +11,26 @@
 	</section>
 	<section class="gallery--content">
 	<%photos.forEach(function(photo){%>
+	<a name="<%= photo.id  %>"></a>
 		<div class="gallery--content-photo">
-			<span class="gallery--content-photo-sign"><%= photo.name%></span>
-			<a href="/photo/<%= photo.id %>/open"><img class="gallery--content-photo-img"src="<%=photo.thumb_path%>" alt="<%=photo.name%>"></a>
-			<a href="/photo/<%=photo.id %>/download" class="gallery--content-photo-download">>>download<<</span></a>
+			<span class="gallery--content-photo-sign">
+				<a class="link-delete" href="#" data-id="<%= photo.id %>">
+					<i class="fa fa-times"></i>
+				</a>
+					<%= photo.name%>
+				<a class="link-updateSign" href="#" data-id="<%= photo.id%>">
+					<i class="fa fa-pencil"></i>
+				</a>
+			</span>
+
+			<a href="/photo/<%= photo.id %>/open">
+				<img class="gallery--content-photo-img"src="<%=photo.thumb_path%>" alt="<%=photo.name%>">
+			</a>
+
+			<a href="/photo/<%=photo.id %>/download" class="gallery--content-photo-download">
+				>>download<<
 		</div>
+	</a>
 	<%})%>
 	</section>
 </div>

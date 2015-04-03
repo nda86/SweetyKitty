@@ -87,6 +87,25 @@
 					font-family: "Romanesco", serif;
 					font-weight: 400;
 					font-size: 1.6em;
+					.link-delete{
+						display: block;
+						float: left;
+						margin-left: 7px;
+						color: red;
+						&:hover{
+							color: darken(red,25%);
+						}
+					}
+
+					.link-updateSign{
+						display: block;
+						float: right;
+						margin-right: 7px;
+						color: green;
+						&:hover{
+							color: darken(green,15%);
+						}
+					}
 				}
 
 		}
