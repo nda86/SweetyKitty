@@ -22,9 +22,11 @@
 			font-size: 1.5em;
 			letter-spacing: 0.5em;
 			padding: 1em;
+			font-family: "Lato", arial;
 		}
 
 		.gallery--header-description{
+			font-family: "Lato", arial;
 			background: darken(white,25);
 			display: block;
 			text-align: center;
@@ -70,6 +72,7 @@
 					@include box-sizing(content-box !important);
 					text-decoration: none;
 					text-transform: uppercase;
+					font-family: "Lato",arial;
 						&:hover{
 							color: #fff;
 							background: darken(#fff,75%);
@@ -81,7 +84,9 @@
 					background: darken(#fff,75%);
 					display: block;
 					color: #fff;
-					font-weight: 700;
+					font-family: "Romanesco", serif;
+					font-weight: 400;
+					font-size: 1.6em;
 				}
 
 		}

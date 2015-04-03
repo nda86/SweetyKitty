@@ -457,8 +457,10 @@ html, body {
   font-size: 1.5em;
   letter-spacing: 0.5em;
   padding: 1em;
+  font-family: "Lato", arial;
 }
 .gallery--wrapper .gallery--header .gallery--header-description {
+  font-family: "Lato", arial;
   background: #bfbfbf;
   display: block;
   text-align: center;
@@ -503,6 +505,7 @@ html, body {
   box-sizing: content-box !important;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Lato",arial;
 }
 .gallery--wrapper .gallery--content .gallery--content-photo .gallery--content-photo-download:hover {
   color: #fff;
@@ -512,7 +515,9 @@ html, body {
   background: #404040;
   display: block;
   color: #fff;
-  font-weight: 700;
+  font-family: "Romanesco", serif;
+  font-weight: 400;
+  font-size: 1.6em;
 }
 
 .upload--wrapper {
@@ -544,6 +549,7 @@ html, body {
   padding: 10px;
   text-align: center;
   font-weight: 700;
+  font-family: "Lato", arial;
 }
 .upload--wrapper .upload--form__wrapper {
   width: 83.33333%;
@@ -563,6 +569,7 @@ html, body {
   margin: 5px auto;
   display: inline-block;
   color: #000;
+  font-family: "Philosopher", serif;
 }
 @media (min-width: 472px) {
   .upload--wrapper .upload--form__wrapper .upload--form > fieldset {
@@ -660,7 +667,7 @@ input.upload--form-file-input {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -681,10 +688,12 @@ input.upload--form-file-input {
   }
 }
 .header--wrapper .header--logo .header--logo-title {
-  font-size: 1.7em;
-  line-height: 1.7em;
+  font-family: "Lobster", serif;
+  letter-spacing: 0.1em;
+  font-size: 2em;
+  line-height: 1.8em;
   color: #DDDDDD;
-  font-weight: 600;
+  font-weight: 400;
 }
 .header--wrapper .header--nav-toggle-wrapper {
   -moz-box-sizing: border-box;
@@ -776,6 +785,7 @@ input.upload--form-file-input {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Philosopher" sans-serif;
   margin: 0 auto;
   border-bottom: 1px solid rgba(204, 204, 204, 0.5);
   width: 75%;
@@ -824,6 +834,13 @@ input.upload--form-file-input {
   text-align: center;
   padding: 3px;
   color: #bfbfbf;
+  font-family: "Philosopher", serif;
+  font-size: 1em;
+}
+@media (min-width: 410px) {
+  .footer--wrapper .footer--credits {
+    font-size: 1.3em;
+  }
 }
 @media (min-width: 1024px) {
   .footer--wrapper .footer--credits {

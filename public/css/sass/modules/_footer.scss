@@ -11,6 +11,12 @@
 		text-align: center;
 		padding: 3px;
 		color: darken(#fff,25%);
+		font-family: "Philosopher", serif;
+		font-size: 1em;
+		@media (min-width: 410px){
+			font-size: 1.3em;
+		}
+
 		@media (min-width: 1024px){
 			width: span(10);
 			margin: 0 auto;
