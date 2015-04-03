@@ -107,6 +107,8 @@ app.get('/photo/:id/download',photosRoute.download(root));
 app.post('/photo/:id/updateSign',photosRoute.updateSign);
 app.get('/photo/:id/delete',photosRoute.delete);
 
+
+app.post('/signup',usersRoute.signupSend)
 // error hanler
 app.use(errorhandler());
 
