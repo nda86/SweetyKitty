@@ -6,17 +6,24 @@
 				<label class="signup--form-name-label">
 					name
 				</label>
-				<input type="text" class="signup--form-name-input" name="name">
+				<input type="text" required class="signup--form-name-input" name="name">
 			</fieldset>
 			<fieldset class="signup--form-password">
 				<label class="signup--form-password-label">
 					password
 				</label>
-				<input type="password" class="signup--form-password-input" name="password">
+				<input type="password" required class="signup--form-password-input" name="password">
+			</fieldset>
+			<fieldset class="signup--form-password_confirm">
+				<label class="signup--form-password_confirm-label">
+					repeat password
+				</label>
+				<input type="password" required class="signup--form-password_confirm-input">
 			</fieldset>
 			<fieldset class="signup--form-submit">
 				<input type="submit" class="signup--form-submit-button" value="sign up">
 			</fieldset>
+			<div class="signup--form-hint"></div>
 		</form>
 	</div>
 </section>

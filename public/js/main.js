@@ -41,6 +41,32 @@ $(document).ready(function(){
 		/*-----  End of delete photo  ------*/
 
 
+		/*==============================================
+		=            validation signup form            =
+		==============================================*/
+		
+			// var flag = false;
+			$('.signup--form').on('submit',function(e){
+				var pass = $('.signup--form .signup--form-password-input').val();
+				var REpass = $('.signup--form .signup--form-password_confirm-input').val();
+				var hint = $('.signup--form-hint');
+				if (pass != REpass){
+					hint.text('Passwords mismatch!');
+					return false;
+				}else{
+					hint.text('');
+					return true;
+				};
+				
+			});
+		
+		
+		
+		/*-----  End of validation signup form  ------*/
+		
+		
+
+
 
 });
 
