@@ -1,5 +1,3 @@
-// var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/kittyDB');
 var db = require('../ext/db');
 
 var schemaPhoto = new db.Schema({

@@ -892,6 +892,13 @@ input.upload--form-file-input {
   color: #00050a;
 }
 
+h1.hello {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+}
+
 .signup {
   max-width: 100%;
   margin-left: auto;
@@ -1132,10 +1139,21 @@ input.upload--form-file-input {
   color: #D35400;
 }
 
+.err404 .err404--wrapper {
+  padding-top: 50px;
+  text-align: center;
+}
+.err404 .err404--wrapper .err404--header {
+  color: #fff;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  font-family: monospace arial sans-serif;
+}
+
 .isError {
   font-family: monospace, Arial, sans-serif;
   font-size: 1.2em;
-  color: red;
+  color: #0EA200;
   font-weight: 700;
   width: 100%;
   margin: 0 auto;
