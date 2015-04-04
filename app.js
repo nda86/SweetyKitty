@@ -22,16 +22,16 @@ var sizeImg = 3000000;
 // my utils
 var thumb = require('./utils/thumbnails');
 // plugin routes
-var routes = require('./routes');
+// var routes = require('./routes');
 
 
 
 
 
-// router for photo
-var photosRoute = require('./routes/photos');
-var usersRoute = require('./routes/users');
-
+// controllers
+var mainCtrl = require('./controllers/main');
+var photosCtrl = require('./controllers/photos');
+var usersCtrl = require('./controllers/users');
 
 
 
@@ -87,12 +87,12 @@ app.use(methodOverride());
 
 
 
-app.get('/',routes.index);
-app.get('/show', photosRoute.list);
-app.get('/upload',photosRoute.form);
-app.get('/signup',usersRoute.signupForm);
-app.get('/login',usersRoute.loginForm);
-app.get('/logout',usersRoute.logOut);
+app.get('/',mainCtrl.home);
+app.get('/show', photosCtrl.list);
+app.get('/upload',photosCtrl.form);
+app.get('/signup',usersCtrl.signupForm);
+app.get('/login',usersCtrl.loginForm);
+app.get('/logout',usersCtrl.logOut);
 
 var options = {
 	dest: './public/photos/',
@@ -113,16 +113,16 @@ var options = {
 	}
 }
 app.post('/upload', multer(options), 
-	photosRoute.submit(app.get('photos')));
+	photosCtrl.submit(app.get('photos')));
 
-app.get('/photo/:id/open',photosRoute.open(root));
-app.get('/photo/:id/download',photosRoute.download(root));
-app.post('/photo/:id/updateSign',photosRoute.updateSign);
-app.get('/photo/:id/delete',photosRoute.delete);
+app.get('/photo/:id/open',photosCtrl.open(root));
+app.get('/photo/:id/download',photosCtrl.download(root));
+app.post('/photo/:id/updateSign',photosCtrl.updateSign);
+app.get('/photo/:id/delete',photosCtrl.delete);
 
 
-app.post('/signup',usersRoute.signupSend)
-app.post('/login',usersRoute.loginSend)
+app.post('/signup',usersCtrl.signupSend)
+app.post('/login',usersCtrl.loginSend)
 // error hanler
 app.use(errorhandler());
 
