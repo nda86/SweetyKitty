@@ -44,13 +44,13 @@ userSchema.virtual('password')
 
 userSchema.methods.getHash = function(password){
 	
-	var hmac = crypto.createHmac('sha1',this.salt);
+	var c = crypto.createHmac('sha1',this.salt);
 
 	for(var i=0;i<this.iteration;i++){
-		hmac = hmac.update(password);
+		c = c.update(password);
 	}
 
-	return hmac.digest('hex');
+	return c.digest('hex');
 }
 
 userSchema.methods.validPassword = function(password){

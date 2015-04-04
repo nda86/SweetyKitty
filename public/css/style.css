@@ -1005,3 +1005,139 @@ input.upload--form-file-input {
   color: #000;
   background: #D35400;
 }
+
+.login-wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+.login-wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.login-wrapper .login--header {
+  width: 83.33333%;
+  margin: 0px auto;
+  background: rgba(129, 207, 224, 0.5);
+  -moz-border-radius: 1.3em;
+  -webkit-border-radius: 1.3em;
+  border-radius: 1.3em;
+}
+.login-wrapper .login--header > span {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 1.3em;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Lato", arial;
+}
+.login-wrapper .login--form_wrapper {
+  width: 83.33333%;
+  margin: 30px auto;
+  background: rgba(207, 0, 15, 0.7);
+  padding: 10px;
+  -moz-border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  border-radius: 1.5em;
+}
+.login-wrapper .login--form_wrapper > form {
+  text-align: center;
+}
+.login-wrapper .login--form_wrapper > form > fieldset {
+  border: none;
+  margin: 5px auto;
+  display: inline-block;
+  color: #000;
+  font-family: "Philosopher", serif;
+}
+@media (min-width: 472px) {
+  .login-wrapper .login--form_wrapper > form > fieldset {
+    width: 100%;
+  }
+}
+.login-wrapper .login--form_wrapper > form > fieldset > span {
+  text-transform: capitalize;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px;
+  padding-right: 15px;
+  border-bottom: 1px solid #ccc;
+  max-width: 100%;
+}
+@media (min-width: 472px) {
+  .login-wrapper .login--form_wrapper > form > fieldset > span {
+    display: block;
+    margin-bottom: 7px;
+  }
+}
+.login-wrapper .login--form_wrapper > form > fieldset > input {
+  border: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+@media (min-width: 472px) {
+  .login-wrapper .login--form_wrapper > form > fieldset > input {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .login-wrapper .login--form_wrapper > form > fieldset > input {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .login-wrapper .login--form_wrapper > form > fieldset > input {
+    width: 70%;
+  }
+}
+.login-wrapper .login--form_wrapper > form > fieldset > input[type=file] {
+  color: #fff;
+}
+.login-wrapper .login--form_wrapper > form > fieldset > input[type=submit] {
+  width: 200px;
+  height: 35px;
+  color: #D35400;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3em;
+  background: #000;
+  margin: 0 auto;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
+}
+.login-wrapper .login--form_wrapper > form > fieldset > input[type=submit]:hover {
+  color: #000;
+  background: #D35400;
+}
+.login-wrapper .login--form_wrapper .not-login {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+.login-wrapper .login--form_wrapper .not-login a {
+  color: #000;
+}
+.login-wrapper .login--form_wrapper .not-login a:hover {
+  color: #D35400;
+}
+
+.isError {
+  font-family: monospace, Arial, sans-serif;
+  font-size: 1.2em;
+  color: red;
+  font-weight: 700;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}

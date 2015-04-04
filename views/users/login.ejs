@@ -1,0 +1,34 @@
+<% layout('../layout') -%>
+<div class="login-wrapper">
+	<section class="login--header">
+		<span class="login--header-title">
+			Login
+		</span>
+	</section>
+
+	<div class="login--form_wrapper">
+		<form action="/login" method="POST" class="lofin--form">
+			<fieldset class="login--form-name">
+				<span class="login--from-name-title">
+					login
+				</span>
+				<input type="text" name='name' class="login--form-name-input">
+			</fieldset>
+			<fieldset class="login--form-password">
+				<span class="login--from-password-title">
+					password
+				</span>
+				<input type="password" class="login--form-password-input" name="password">
+			</fieldset>
+			<fieldset class="login--form-submit">
+				<input type="submit" value="login" class="login--from-submit-button">
+			</fieldset>
+			<div class="hint isError"><%= typeof hint != 'undefined' ? hint : '' %></div>
+		</form>
+		<div class="not-login">
+			<span>
+				If you don't have login, you may <a href="/signup">Sign Up</a>
+			</span>
+		</div>
+	</div>
+</div>

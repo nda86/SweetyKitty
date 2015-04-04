@@ -5,6 +5,7 @@
 			Upload sweety kitty
 		</span>
 	</section>
+	<% if (user){ %>
 	<section class="upload--form__wrapper">
 		<form  method="POST" enctype="multipart/form-data" class="upload--form">
 			<fieldset class="upload--form-name">
@@ -24,4 +25,7 @@
 			</fieldset>
 		</form>
 	</section>
+	<% }else{ %>
+	<div class="isError">You are not login. This feature is not enabled for you</div>
+	<% } %>
 </section>

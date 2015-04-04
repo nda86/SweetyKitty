@@ -3,6 +3,7 @@ var ejs = require('ejs');
 var engine = require('ejs-locals');
 var express = require('express');
 var converter = require('byte-converter');
+var session = require('express-session');
 var app = express();
 
 var root = __dirname;
@@ -63,6 +64,16 @@ app.set('photos','/photos');
 
 // logger
 app.use(morgan('tiny'));
+// session storage
+app.use(session({
+	secret: 'keyboard cat',
+	cookie: {
+		path: '/',
+		httpOnly: true,
+		secure: false,
+		maxAge: null
+	}
+}));
 // serve static
 app.use(serveStatic(path.join(__dirname,'public')));
 // load favicon
@@ -80,6 +91,8 @@ app.get('/',routes.index);
 app.get('/show', photosRoute.list);
 app.get('/upload',photosRoute.form);
 app.get('/signup',usersRoute.signupForm);
+app.get('/login',usersRoute.loginForm);
+app.get('/logout',usersRoute.logOut);
 
 var options = {
 	dest: './public/photos/',
@@ -109,6 +122,7 @@ app.get('/photo/:id/delete',photosRoute.delete);
 
 
 app.post('/signup',usersRoute.signupSend)
+app.post('/login',usersRoute.loginSend)
 // error hanler
 app.use(errorhandler());
 

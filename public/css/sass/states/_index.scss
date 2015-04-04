@@ -1,1 +1,12 @@
 // style for global .is-checked, .is-active, .is-error, .is-success
+.isError{
+	font-family: monospace, Arial, sans-serif;
+	font-size: 1.2em;
+	color: red;
+	// letter-spacing: 1.05em;
+	font-weight: 700;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	
+}

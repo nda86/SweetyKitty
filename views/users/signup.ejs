@@ -29,7 +29,7 @@
 				<fieldset class="signup--form-submit">
 					<input type="submit" class="signup--form-submit-button" value="sign up">
 				</fieldset>
-				<div class="signup--form-hint"></div>
+				<div class="signup--form-hint isError"><%= typeof err != 'undefined' ? err : '' %></div>
 			</form>
 		</div>
 	</div>

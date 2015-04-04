@@ -1,0 +1,25 @@
+.login-wrapper{
+	@include container();
+	padding-top: 30px;
+
+	.login--header{
+		@include header;
+	}
+
+	.login--form_wrapper{
+		@include form;
+
+		.not-login{
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			color: #fff;
+			a{
+				color: #000;
+				&:hover{
+					color: #D35400;
+				}
+			}
+		}
+	}
+}

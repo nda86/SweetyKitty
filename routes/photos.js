@@ -7,7 +7,8 @@ exports.list = function(req,res,next){
 		if(err) next(err);
 		res.render('photos/show',{
 			title: 'Photo Gallery',
-			photos: photos
+			photos: photos,
+			user: req.session.user
 		});
 		
 	});
@@ -16,7 +17,8 @@ exports.list = function(req,res,next){
 // при запроси с страницы загрузки рендерим страницу с формой
 exports.form = function(req,res){
 	res.render('photos/upload',{
-		title: 'Upload Photo'
+		title: 'Upload Photo',
+		user: req.session.user
 	});
 };
 

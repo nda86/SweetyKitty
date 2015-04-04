@@ -14,7 +14,11 @@
 			<a href="/"><li>Home</li></a>
 			<a href="/show"><li>Show Kitties</li></a>
 			<a href="/upload"><li>Upload Kitty</li></a>
-			<a href="/signup"><li>sign up</li></a>
+			<% if (typeof user != 'undefined'){ %>
+			<a href="/logout"><li>log out</li></a>
+			<% }else{ %>
+			<a href="/login"><li>log in</li></a>
+			<% } %>
 		</ul>
 	</nav>
 </div>

@@ -13,6 +13,7 @@
 	<a name="<%= photo.id  %>"></a>
 		<div class="gallery--content-photo">
 			<span class="gallery--content-photo-sign">
+			<%if (user){ %>
 				<a class="link-delete" href="#" data-id="<%= photo.id %>">
 					<i class="fa fa-times"></i>
 				</a>
@@ -20,6 +21,10 @@
 				<a class="link-updateSign" href="#" data-id="<%= photo.id%>">
 					<i class="fa fa-pencil"></i>
 				</a>
+				<% }else{ %>
+					<%= photo.name%>
+				<% } %>
+				
 			</span>
 
 			<a href="/photo/<%= photo.id %>/open">
