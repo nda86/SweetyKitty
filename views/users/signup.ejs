@@ -1,29 +1,36 @@
 <% layout('../layout') -%>
-<section class="signUp">
+<section class="signup">
 	<div class="wrapper">
-		<form action="/signup" method="POST" class="signup--form">
-			<fieldset class="signup--form-name">
-				<label class="signup--form-name-label">
-					name
-				</label>
-				<input type="text" required class="signup--form-name-input" name="name">
-			</fieldset>
-			<fieldset class="signup--form-password">
-				<label class="signup--form-password-label">
-					password
-				</label>
-				<input type="password" required class="signup--form-password-input" name="password">
-			</fieldset>
-			<fieldset class="signup--form-password_confirm">
-				<label class="signup--form-password_confirm-label">
-					repeat password
-				</label>
-				<input type="password" required class="signup--form-password_confirm-input">
-			</fieldset>
-			<fieldset class="signup--form-submit">
-				<input type="submit" class="signup--form-submit-button" value="sign up">
-			</fieldset>
-			<div class="signup--form-hint"></div>
-		</form>
+		<section class="signup--header">
+			<span class="signup--header-title">
+				sign up
+			</span>
+		</section>
+		<div class="signup--form_wrapper">
+			<form action="/signup" method="POST" class="signup--form">
+				<fieldset class="signup--form-name">
+					<span class="signup--form-name-span">
+						name
+					</span>
+					<input type="text" required class="signup--form-name-input" name="name">
+				</fieldset>
+				<fieldset class="signup--form-password">
+					<span class="signup--form-password-span">
+						password
+					</span>
+					<input type="password" required class="signup--form-password-input" name="password">
+				</fieldset>
+				<fieldset class="signup--form-password_confirm">
+					<span class="signup--form-password_confirm-span">
+						repeat password
+					</span>
+					<input type="password" required class="signup--form-password_confirm-input">
+				</fieldset>
+				<fieldset class="signup--form-submit">
+					<input type="submit" class="signup--form-submit-button" value="sign up">
+				</fieldset>
+				<div class="signup--form-hint"></div>
+			</form>
+		</div>
 	</div>
 </section>

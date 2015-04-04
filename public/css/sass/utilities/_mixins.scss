@@ -35,3 +35,108 @@
 
 
 // }
+
+@mixin header{
+	width: span(10);
+	margin: 0px auto;
+	background: rgba(#81CFE0,0.5);
+	@include border-radius(1.3em);
+	& > span{
+		color: #000;
+		text-transform: uppercase;
+		letter-spacing: 0.3em;
+		font-size: 1.3em;
+		display: block;
+		padding: 10px;
+		text-align: center;
+		font-weight: 700;
+		font-family: "Lato", arial;
+	}
+}
+// @mixin header-title{
+// 	color: #000;
+// 	text-transform: uppercase;
+// 	letter-spacing: 0.3em;
+// 	font-size: 1.3em;
+// 	display: block;
+// 	padding: 10px;
+// 	text-align: center;
+// 	font-weight: 700;
+// 	font-family: "Lato", arial;
+// }
+
+
+@mixin form{
+		width: span(10);
+		margin: 30px auto;
+		// margin-top: 30px;
+		// margin-bottom: 30px;
+		background: rgba(#CF000F,0.7);
+		padding: 10px;
+		@include border-radius(1.5em);
+		&>form{
+			text-align: center;
+			&>fieldset{
+				border: none;
+				margin: 5px auto;
+				display: inline-block;
+				color: #000;
+				font-family: "Philosopher", serif;
+				@media (min-width: 472px){
+					// display: block;
+					width: 100%;
+				}
+				& >span{
+					text-transform: capitalize;
+					font-size: 1.1em;
+					color: #fff;
+					font-weight: 600;
+					padding: 5px;
+					padding-right: 15px;
+					border-bottom: 1px solid #ccc;
+					max-width: 100%;
+					@media (min-width: 472px){
+						display: block;
+						margin-bottom: 7px;
+					}
+				}
+				&>input{
+					border: none;
+					@include border-radius(5px);
+					padding: 5px;
+					width: 100%;
+					@media (min-width: 472px){
+					// display: block;
+						width: 100%;
+					}
+					@media (min-width: 768px){
+					// display: block;
+						width: 80%;
+					}
+					@media (min-width: 1024px){
+					// display: block;
+						width: 70%;
+					}
+				}
+				&>input[type=file]{
+					color: #fff;
+				}
+				&>input[type=submit]{
+					width: 200px;
+					height: 35px;
+					color: #D35400;
+					text-transform: uppercase;
+					font-weight: 700;
+					font-size: 1.3em;
+					background: #000;
+					margin: 0 auto;
+					@include border-radius(11px);
+						&:hover{
+							color: #000;
+							background: #D35400;
+						}
+				}
+			}
+		
+		}
+}

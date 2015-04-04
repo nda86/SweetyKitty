@@ -1,99 +1,105 @@
 .upload--wrapper{
 	@include container();
-	background: #2C3E50;
+	// background: #2C3E50;
 	padding-top: 30px;
 
 
 	.upload--header{
-		width: span(10);
-		margin: 0px auto;
-		background: rgba(#81CFE0,0.5);
-		@include border-radius(1.3em);
-		.upload--header-title{
-			color: #000;
-			text-transform: uppercase;
-			letter-spacing: 0.3em;
-			font-size: 1.3em;
-			display: block;
-			padding: 10px;
-			text-align: center;
-			font-weight: 700;
-			font-family: "Lato", arial;
-		}
+		// width: span(10);
+		// margin: 0px auto;
+		// background: rgba(#81CFE0,0.5);
+		// @include border-radius(1.3em);
+		@include header;
+		// margin-top: 30px;
+		// .upload--header-title{
+		// 	// color: #000;
+		// 	// text-transform: uppercase;
+		// 	// letter-spacing: 0.3em;
+		// 	// font-size: 1.3em;
+		// 	// display: block;
+		// 	// padding: 10px;
+		// 	// text-align: center;
+		// 	// font-weight: 700;
+		// 	// font-family: "Lato", arial;
+
+		// 	@include header-title;
+		// }
 	}
 
 	.upload--form__wrapper{
-		width: span(10);
-		margin: 0 auto;
-		margin-top: 30px;
-		background: rgba(#CF000F,0.7);
-		padding: 10px;
-		@include border-radius(1.5em);
-		.upload--form{
-			text-align: center;
-			&>fieldset{
-				border: none;
-				margin: 5px auto;
-				display: inline-block;
-				color: #000;
-				font-family: "Philosopher", serif;
-				@media (min-width: 472px){
-					// display: block;
-					width: 100%;
-				}
-				& >span{
-					text-transform: capitalize;
-					font-size: 1.1em;
-					color: #fff;
-					font-weight: 600;
-					padding: 5px;
-					padding-right: 15px;
-					border-bottom: 1px solid #ccc;
-					max-width: 100%;
-					@media (min-width: 472px){
-						display: block;
-						margin-bottom: 7px;
-					}
-				}
-				&>input{
-					border: none;
-					@include border-radius(5px);
-					padding: 5px;
-					width: 100%;
-					@media (min-width: 472px){
-					// display: block;
-						width: 100%;
-					}
-					@media (min-width: 768px){
-					// display: block;
-						width: 80%;
-					}
-					@media (min-width: 1024px){
-					// display: block;
-						width: 70%;
-					}
-				}
-				.upload--form-file-input{
-					color: #fff;
-				}
-				.upload--form-submit-button{
-					width: 200px;
-					height: 35px;
-					color: #D35400;
-					text-transform: uppercase;
-					font-weight: 700;
-					font-size: 1.3em;
-					background: #000;
-					margin: 0 auto;
-					@include border-radius(11px);
-						&:hover{
-							color: #000;
-							background: #D35400;
-						}
-				}
-			}
+		@include form;
+		// margin-bottom: 30px;
+		// width: span(10);
+		// margin: 0 auto;
+		// margin-top: 30px;
+		// background: rgba(#CF000F,0.7);
+		// padding: 10px;
+		// @include border-radius(1.5em);
+		// .upload--form{
+		// 	text-align: center;
+		// 	&>fieldset{
+		// 		border: none;
+		// 		margin: 5px auto;
+		// 		display: inline-block;
+		// 		color: #000;
+		// 		font-family: "Philosopher", serif;
+		// 		@media (min-width: 472px){
+		// 			// display: block;
+		// 			width: 100%;
+		// 		}
+		// 		& >span{
+		// 			text-transform: capitalize;
+		// 			font-size: 1.1em;
+		// 			color: #fff;
+		// 			font-weight: 600;
+		// 			padding: 5px;
+		// 			padding-right: 15px;
+		// 			border-bottom: 1px solid #ccc;
+		// 			max-width: 100%;
+		// 			@media (min-width: 472px){
+		// 				display: block;
+		// 				margin-bottom: 7px;
+		// 			}
+		// 		}
+		// 		&>input{
+		// 			border: none;
+		// 			@include border-radius(5px);
+		// 			padding: 5px;
+		// 			width: 100%;
+		// 			@media (min-width: 472px){
+		// 			// display: block;
+		// 				width: 100%;
+		// 			}
+		// 			@media (min-width: 768px){
+		// 			// display: block;
+		// 				width: 80%;
+		// 			}
+		// 			@media (min-width: 1024px){
+		// 			// display: block;
+		// 				width: 70%;
+		// 			}
+		// 		}
+		// 		.upload--form-file-input{
+		// 			color: #fff;
+		// 		}
+		// 		.upload--form-submit-button{
+		// 			width: 200px;
+		// 			height: 35px;
+		// 			color: #D35400;
+		// 			text-transform: uppercase;
+		// 			font-weight: 700;
+		// 			font-size: 1.3em;
+		// 			background: #000;
+		// 			margin: 0 auto;
+		// 			@include border-radius(11px);
+		// 				&:hover{
+		// 					color: #000;
+		// 					background: #D35400;
+		// 				}
+		// 		}
+		// 	}
 		
-		}
+		// }
 	}
 }
 

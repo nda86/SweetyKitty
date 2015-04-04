@@ -1,0 +1,12 @@
+.signup{
+	@include container();
+	padding-top: 30px;
+	.wrapper{
+		.signup--header{
+			@include header;
+		}
+		.signup--form_wrapper{
+			@include form;
+		}
+	}
+}
