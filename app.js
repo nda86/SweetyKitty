@@ -74,7 +74,8 @@ var optionsMulter = {
 			}
 		},
 		rename: function(fieldname,filename,req,req){
-			return 'www_' + filename;	
+			console.log('dielname: ' + filename);
+			return 'SK_' + Date.now();	
 		},
 		onFileUploadComplete: function(file,req,res){
 			var newName = thumb.makeThumbnail(root,file);
