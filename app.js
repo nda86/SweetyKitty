@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+// var Router = require('router');
+
+// var router = new Router({strict: false});
 
 
 // require middlewares
@@ -23,6 +26,7 @@ var serveIndex = require('serve-index');
 // config variable
 var confSession = require('./ext/configs').optionsSession;
 var root = __dirname;
+var point = '';
 
 
 // ext
@@ -45,13 +49,45 @@ var photosCtrl = require('./controllers/photos');
 var usersCtrl = require('./controllers/users');
 
 
-
+// app.use(function(req,res,next){
+// 	var url = req.url;
+// 	if(url.lastIndexOf('/') == 0){
+// 		point = url;
+// 	}else{
+// 		point = req.url.substr(0,req.url.lastIndexOf('/'));
+// 	}
+// 	// return app.use(point, serveStatic(path.join(__dirname,'public')));
+// 	// console.log('point :' + point);
+// 	next();
+// });
 // logger
+app.use(function(req,res,next){
+		if( req.url === '/css'
+		 || req.url === '/js'
+		 || req.url === '/img'){
+			res.redirect(303, req.url + "_");
+		}else{
+			next();
+		}
+	
+})
 app.use(morgan('tiny'));
+
+app.use(function(req,res,next){
+	if(req.url.substr(-1) === "/" && req.url.length>1 && req.url !== "/photos/" ){
+		res.redirect(301,req.url.slice(0,-1));
+	}else{
+		next();
+	}
+});
+// app.use('/css', serveStatic(path.join(__dirname,'public')));
 // session storage
 app.use(session(confSession));
 // serve static
-app.use(serveStatic(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public')));
+// app.use("/*/", serveStatic(path.join(__dirname,'public')));
+// app.use('/js', serveStatic(path.join(__dirname,'public')));
+// app.use('/img', serveStatic(path.join(__dirname,'public')));
 // load favicon
 app.use(servefavicon(path.join(__dirname,'public/favicon.ico')));
 // parsing data from forms
