@@ -1,5 +1,6 @@
 var Photo = require('../models/Photo');
 var pathUtil = require('path');
+var fs = require('fs');
 
 // запрашиваем в базе фоточки и отправляем их в рендер 
 exports.list = function(req,res,next){
@@ -105,10 +106,20 @@ exports.updateSign = function(req,res,next){
 		});
 };
 
-exports.delete = function(req,res,nex){
-	var id = req.params.id;
-	Photo.findByIdAndRemove(id,function(err){
-		if(err) next(err);
-		res.redirect('/show');
-	});
+exports.delete = function(dir){
+	return function(req,res,next){
+				var id = req.params.id;
+				Photo.findByIdAndRemove(id,function(err,file){
+					var original = pathUtil.join(dir,file.path);
+					var min = pathUtil.join(dir, file.thumb_path);
+					if(err) next(err);
+						fs.unlink(original,function(err){
+							if(err) next(err);
+							fs.unlink(min,function(err){
+								if(err) next(err);
+									res.redirect('/show');
+							})
+						});
+				});
+	}
 }

@@ -123,7 +123,7 @@ app.get('/photo/:id/download',photosCtrl.download(root));
 
 app.post('/photo/:id/updateSign',photosCtrl.updateSign);
 
-app.get('/photo/:id/delete',photosCtrl.delete);
+app.get('/photo/:id/delete',photosCtrl.delete(__dirname + '/public'));
 
 app.use(function(req,res){
 	res.status(400);
