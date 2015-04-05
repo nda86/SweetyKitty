@@ -26,9 +26,9 @@ exports.form = function(req,res){
 // при submite формы
 // dir это там где у нас лежат фоточки относительно public
 exports.submit = function(dir){
-	return function(req,res){
+	return function(req,res,next){
 		// name подпись фоточки получаемое с формы
-				var name = req.body.name;
+				var nameImg = req.body.nameImg;
 		//newName - путь для thumbnail'a для загружаемой фотки
 		//это значение определяется в моём модуле thumbnails в функции makeThumbnail 
 		//после того как мин сделана..путь миньки пишется в объект file который доступен по 
@@ -37,7 +37,6 @@ exports.submit = function(dir){
 				var x = req.files.photo.newName;
 			//делаем его относительным(относительно /public)
 				var thumb_path = x.substring(x.lastIndexOf(dir));
-				console.log('from submit: ' + thumb_path);
 		// путь куда сохраняется фотка public/photos/file
 				var oldPath = req.files.photo.path;
 		// change public/photos/file to /photos/file
@@ -45,14 +44,14 @@ exports.submit = function(dir){
 						pathUtil.join(dir,req.files.photo.name));
 		// make a new object in our collection(mongoDB)
 				var kitty = new Photo({
-					name: name,//sign fotki from form
+					name: nameImg,//sign fotki from form
 					path: path,//path fotki from req.files.photo
 					thumb_path: thumb_path//patn of thumbnail from req.files.photo
 				});
 		// save object to db
 				kitty.save(function(err){
-					if (err) return console.log('meow');
-					// res.redirect('./show');
+					if (err) return console.log(err);
+					console.log('save done');
 					res.redirect('./upload');
 				});
 	}
@@ -90,7 +89,6 @@ exports.download = function(dir){
 			var filename = photo.name + ext;
 			res.download(path,filename,function(err){
 				if(err) next(err);
-				console.log('download');
 			});
 		})
 	}

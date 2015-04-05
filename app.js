@@ -131,12 +131,20 @@ app.use(function(req,res){
 	});
 });
 
-app.use(function(err,req,res,next){
-	res.status(500);
-	res.render('500',{
-		title: 'Internal Server Error'
+var env = process.env.NODE_ENV || 'development';
+
+if (env == 'development'){
+	app.use(errorhandler());
+}else{
+	app.use(function(err,req,res,next){
+		res.status(500);
+		res.render('500',{
+			title: 'Internal Server Error'
+		});
 	});
-});
+}
+
+
 
 http.createServer(app).listen(app.get('port'),function(){
 	console.log('Express server listening on port: ' + app.get('port'));
