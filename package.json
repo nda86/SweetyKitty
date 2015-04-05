@@ -22,6 +22,7 @@
     "multer": "^0.1.8",
     "path": "^0.11.14",
     "serve-favicon": "^2.2.0",
+    "serve-index": "^1.6.3",
     "serve-static": "^1.9.2"
   }
 }

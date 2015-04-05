@@ -17,6 +17,7 @@ var ejs = require('ejs');
 var engine = require('ejs-locals');
 var http = require('http');
 var multer = require('multer');
+var serveIndex = require('serve-index');
 
 
 // config variable
@@ -59,6 +60,8 @@ app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 // methodOverride
 app.use(methodOverride());
+// serve index dir
+app.use("/photos",serveIndex('public/photos/'));
 
 var	extImg = ['jpg','jpeg','gif','png'];
 var	sizeImg = 3000000;
